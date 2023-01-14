@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('villa', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('type_id');
-            $table->unsignedBigInteger('house_location_id');
+            $table->unsignedBigInteger('house_locations_id');
             $table->string('name');
             $table->integer('beds');
             $table->integer('rooms');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('type_id')->references('id')->on('type');
-            $table->foreign('house_location_id')->references('id')->on('house_location');
+            $table->foreign('house_locations_id')->references('id')->on('house_locations');
         });
     }
 

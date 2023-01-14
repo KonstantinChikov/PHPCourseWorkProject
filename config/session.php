@@ -50,7 +50,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session File Location
+    | Session File HouseLocation
     |--------------------------------------------------------------------------
     |
     | When using the native session driver, we need a location where session
