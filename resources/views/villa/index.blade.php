@@ -25,8 +25,8 @@
                     <tr>
                         <td>{{( $villas->id)}}</td>
                         <td>{{( $villas->name)}}</td>
-                        <td>{{( $villas->types->name)}}</td>
-                        <td>{{( $villas->house_location->name)}}</td>
+                        <td>{{( $villas->type->name)}}</td>
+                        <td>{{( $villas->location->name)}}</td>
                         <td>{{( $villas->beds)}}</td>
                         <td>{{( $villas->rooms)}}</td>
                         <td>{{( $villas->bathrooms)}}</td>

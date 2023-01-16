@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\HouseRequest;
+use App\Http\Requests\VillaRequest;
 use App\Models\Villa;
 use Illuminate\Http\Request;
 
@@ -22,7 +22,7 @@ class VillaController extends Controller
     {
         echo $request;
         $data = $request->except('_method', '_token');
-        House::create($data);
+        Villa::create($data);
 
         return redirect(route('villa.index'));
     }

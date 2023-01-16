@@ -6,7 +6,8 @@
                 <div class="card">
                     <h5 class="card-header">{{ __('Edit Location') }}</h5>
                     <div class="card-body">
-                        <form method="post" action="{{route('house_location.update', $house_location->id)}}" enctype="multipart/form-data">
+
+                        <form method="post" action="{{route('locations.update', $house_location->id)}}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="row mb-3">

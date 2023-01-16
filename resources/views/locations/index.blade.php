@@ -4,7 +4,7 @@
     <div class="container">
         <h1 class="text-center mt-3">{{__('Locations')}}</h1>
         <div class="mb-3 mt-3 text-right">
-            <a href="{{route('house_location.create')}}"
+            <a href="{{route('locations.create')}}"
                class="btn btn-primary float-end">{{__('Create new')}}
             </a>
         </div>
@@ -17,7 +17,7 @@
                 <th>{{__('Landmarks')}}</th>
                 </thead>
                 <tbody>
-                @foreach($house_location as $locations)
+                @foreach($location as $locations)
                     <tr>
                         <td>{{( $locations->id)}}</td>
                         <td>{{( $locations->name)}}</td>
@@ -26,9 +26,9 @@
                         <td>
                             <div class="d-flex">
                                 <div class="edit mx-2">
-                                    <a href="{{route('house_location.edit',  $locations->id)}}" class="btn btn-primary">{{__('Edit')}}</a>
+                                    <a href="{{route('locations.edit',  $locations->id)}}" class="btn btn-primary">{{__('Edit')}}</a>
                                 </div>
-                                <form  method="post" action="{{route('house_location.delete',  $locations->id)}}" class="d-inline">
+                                <form  method="post" action="{{route('locations.delete',  $locations->id)}}" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger"

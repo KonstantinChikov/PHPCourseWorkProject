@@ -24,7 +24,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::group(['prefix' => 'villa'], function () {
+Route::group(['prefix' => 'villas'], function () {
     Route::get('/', [VillaController::class, 'index'])->name('villa.index');
     Route::get('/create', [VillaController::class, 'create'])->name('villa.create');
     Route::post('/', [VillaController::class, 'store'])->name('villa.store');
@@ -33,13 +33,13 @@ Route::group(['prefix' => 'villa'], function () {
     Route::delete('/delete/{id}', [VillaController::class, 'delete'])->name('villa.delete');
 });
 
-Route::group(['prefix' => 'house_location'], function () {
-    Route::get('/', [LocationController::class, 'index'])->name('house_location.index');
-    Route::get('/create', [LocationController::class, 'create'])->name('house_location.create');
-    Route::post('/', [LocationController::class, 'store'])->name('house_location.store');
-    Route::get('edit/{id}', [LocationController::class, 'edit'])->name('house_location.edit');
-    Route::put('update/{id}', [LocationController::class, 'update'])->name('house_location.update');
-    Route::delete('/delete/{id}', [LocationController::class, 'delete'])->name('house_location.delete');
+Route::group(['prefix' => 'locations'], function () {
+    Route::get('/', [LocationController::class, 'index'])->name('locations.index');
+    Route::get('/create', [LocationController::class, 'create'])->name('locations.create');
+    Route::post('/', [LocationController::class, 'store'])->name('locations.store');
+    Route::get('edit/{id}', [LocationController::class, 'edit'])->name('locations.edit');
+    Route::put('update/{id}', [LocationController::class, 'update'])->name('locations.update');
+    Route::delete('/delete/{id}', [LocationController::class, 'delete'])->name('locations.delete');
 });
 
 Route::group(['prefix' => 'type'], function () {

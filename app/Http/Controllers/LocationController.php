@@ -3,39 +3,39 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\LocationRequest;
-use App\Models\HouseLocation;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class LocationController extends Controller
 {
     public function index(){
-        $locations =  HouseLocation::all();
-        return view('house_location.index')->with(['house_location' => $locations]);
+        $locations =  Location::all();
+        return view('locations.index')->with(['location' => $locations]);
     }
 
     public function create()
     {
-        return view('house_location.create');
+        return view('locations.create');
     }
 
     public function store(LocationRequest $request)
     {
         $data = $request->except('_method', '_token');
-        HouseLocation::create($data);
+        Location::create($data);
 
-        return redirect(route('house_location.index'));
+        return redirect(route('locations.index'));
     }
 
     public function edit($id)
     {
-        $house_location =  HouseLocation::find($id);
-        return view('house_location.edit')->with(['house_location' => $house_location]);
+        $house_location =  Location::find($id);
+        return view('locations.edit')->with(['house_location' => $house_location]);
     }
 
     public function update(LocationRequest $request, $id)
     {
         $data = $request->except('_method', '_token');
-        $location =  HouseLocation::find($id);
+        $location =  Location::find($id);
         if ($location){
             $location->update($data);
         }
@@ -43,7 +43,7 @@ class LocationController extends Controller
     }
 
     public function delete($id){
-        $location =  HouseLocation::find($id);
+        $location =  Location::find($id);
         if ($location){
             $location->delete();
         }

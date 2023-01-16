@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\HouseLocation;
+use App\Models\Location;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,7 +16,7 @@ class LocationSeeder extends Seeder
     public function run()
     {
 
-        HouseLocation::create([
+        Location::create([
             'name' => 'Vraca',
             'description' => '30 km to the Castle',
             'landmarks'=>'Castle'

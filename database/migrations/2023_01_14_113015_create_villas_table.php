@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('villa', function (Blueprint $table) {
+        Schema::create('villas', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('type_id');
-            $table->unsignedBigInteger('house_locations_id');
+            $table->unsignedBigInteger('location_id');
             $table->string('name');
             $table->integer('beds');
             $table->integer('rooms');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('type_id')->references('id')->on('types');
-            $table->foreign('house_locations_id')->references('id')->on('house_locations');
+            $table->foreign('location_id')->references('id')->on('locations');
         });
     }
 

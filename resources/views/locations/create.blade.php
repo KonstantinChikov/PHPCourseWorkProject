@@ -6,7 +6,7 @@
                 <div class="card">
                     <h5 class="card-header">{{ __('Add New HouseLocation') }}</h5>
                     <div class="card-body">
-                        <form method="POST" action="{{route('house_location.store')}}" enctype="multipart/form-data">
+                        <form method="POST" action="{{route('locations.store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="row mb-3">
                                 <label for="name"
@@ -33,7 +33,7 @@
                                     <textarea cols="35" rows="5" id="description" type="text"
                                               class="form-control @error('description') is-invalid @enderror"
                                               name="description"
-                                              value="{{ old('description') }}" required autocomplete="name"></textarea>
+                                              value="{{ old('description') }}" required autocomplete="description"></textarea>
                                     @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
