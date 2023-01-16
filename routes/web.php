@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\VillaController;
 use \App\Http\Controllers\LocationController;
 use \App\Http\Controllers\TypeController;
 /*
@@ -23,7 +24,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-
+Route::group(['prefix' => 'villa'], function () {
+    Route::get('/', [VillaController::class, 'index'])->name('villa.index');
+    Route::get('/create', [VillaController::class, 'create'])->name('villa.create');
+    Route::post('/', [VillaController::class, 'store'])->name('villa.store');
+    Route::get('edit/{id}', [VillaController::class, 'edit'])->name('villa.edit');
+    Route::put('update/{id}', [VillaController::class, 'update'])->name('villa.update');
+    Route::delete('/delete/{id}', [VillaController::class, 'delete'])->name('villa.delete');
+});
 
 Route::group(['prefix' => 'house_location'], function () {
     Route::get('/', [LocationController::class, 'index'])->name('house_location.index');
