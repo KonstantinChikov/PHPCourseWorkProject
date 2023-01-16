@@ -187,7 +187,7 @@
           var valueType = value && Util.isElement(value) ? 'element' : toType(value);
 
           if (!new RegExp(expectedTypes).test(valueType)) {
-            throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided type \"" + valueType + "\" ") + ("but expected type \"" + expectedTypes + "\"."));
+            throw new Error(componentName.toUpperCase() + ": " + ("Option \"" + property + "\" provided types \"" + valueType + "\" ") + ("but expected types \"" + expectedTypes + "\"."));
           }
         }
       }
@@ -402,7 +402,7 @@
   var SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]';
   var SELECTOR_DATA_TOGGLE$4 = '[data-toggle="button"]';
   var SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn';
-  var SELECTOR_INPUT = 'input:not([type="hidden"])';
+  var SELECTOR_INPUT = 'input:not([types="hidden"])';
   var SELECTOR_ACTIVE$2 = '.active';
   var SELECTOR_BUTTON = '.btn';
   /**
@@ -3020,7 +3020,7 @@
    * - `auto-end` (on the side with more space available, alignment depends by placement)
    *
    * @static
-   * @type {Array}
+   * @types {Array}
    * @enum {String}
    * @readonly
    * @method placements
@@ -3524,7 +3524,7 @@
   }
 
   /**
-   * Modifier function, each modifier can have a function of this type assigned
+   * Modifier function, each modifier can have a function of this types assigned
    * to its `fn` property.<br />
    * These functions will be called on each update, this means that you must
    * make sure they are performant enough to avoid performance bottlenecks.
@@ -3894,7 +3894,7 @@
    *   }
    * })
    * ```
-   * @type {Object}
+   * @types {Object}
    * @static
    * @memberof Popper
    */
@@ -4080,7 +4080,7 @@
        * guarantee them to follow semver. Use them at your own risk!
        * @static
        * @private
-       * @type {Object}
+       * @types {Object}
        * @deprecated since version 1.8
        * @member Utils
        * @memberof Popper

@@ -1413,7 +1413,7 @@ function getOppositeVariation(variation) {
  * - `auto-end` (on the side with more space available, alignment depends by placement)
  *
  * @static
- * @type {Array}
+ * @types {Array}
  * @enum {String}
  * @readonly
  * @method placements
@@ -1892,7 +1892,7 @@ function inner(data) {
 }
 
 /**
- * Modifier function, each modifier can have a function of this type assigned
+ * Modifier function, each modifier can have a function of this types assigned
  * to its `fn` property.<br />
  * These functions will be called on each update, this means that you must
  * make sure they are performant enough to avoid performance bottlenecks.
@@ -2262,7 +2262,7 @@ var modifiers = {
  *   }
  * })
  * ```
- * @type {Object}
+ * @types {Object}
  * @static
  * @memberof Popper
  */
@@ -2427,7 +2427,7 @@ class Popper {
    * guarantee them to follow semver. Use them at your own risk!
    * @static
    * @private
-   * @type {Object}
+   * @types {Object}
    * @deprecated since version 1.8
    * @member Utils
    * @memberof Popper

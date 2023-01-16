@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('bathrooms');
             $table->timestamps();
 
-            $table->foreign('type_id')->references('id')->on('type');
+            $table->foreign('type_id')->references('id')->on('types');
             $table->foreign('house_locations_id')->references('id')->on('house_locations');
         });
     }
