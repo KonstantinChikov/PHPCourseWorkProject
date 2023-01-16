@@ -17,18 +17,18 @@
                 <th>{{__('Landmarks')}}</th>
                 </thead>
                 <tbody>
-                @foreach($locations as $location)
+                @foreach($house_location as $locations)
                     <tr>
-                        <td>{{( $location->id)}}</td>
-                        <td>{{( $location->name)}}</td>
-                        <td>{{( $location->description)}}</td>
-                        <td>{{( $location->landmarks)}}</td>
+                        <td>{{( $locations->id)}}</td>
+                        <td>{{( $locations->name)}}</td>
+                        <td>{{( $locations->description)}}</td>
+                        <td>{{( $locations->landmarks)}}</td>
                         <td>
                             <div class="d-flex">
                                 <div class="edit mx-2">
-                                    <a href="{{route('house_location.edit',  $location->id)}}" class="btn btn-primary">{{__('Edit')}}</a>
+                                    <a href="{{route('house_location.edit',  $locations->id)}}" class="btn btn-primary">{{__('Edit')}}</a>
                                 </div>
-                                <form  method="post" action="{{route('house_location.delete',  $location->id)}}" class="d-inline">
+                                <form  method="post" action="{{route('house_location.delete',  $locations->id)}}" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger"

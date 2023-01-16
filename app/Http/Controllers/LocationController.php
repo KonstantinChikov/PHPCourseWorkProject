@@ -28,8 +28,8 @@ class LocationController extends Controller
 
     public function edit($id)
     {
-        $location =  HouseLocation::find($id);
-        return view('house_location.edit')->with(['house_location' => $location]);
+        $house_location =  HouseLocation::find($id);
+        return view('house_location.edit')->with(['house_location' => $house_location]);
     }
 
     public function update(LocationRequest $request, $id)
